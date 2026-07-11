@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+body {
+  @apply font-body bg-paper text-ink transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-ink text-paper;
+}
+
+::selection {
+  background-color: #7C9CFF;
+  color: #0B1120;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(124, 156, 255, 0.4);
+  border-radius: 999px;
+}
+
+@layer components {
+  /* Signature element: IDE-style window chrome reused across hero, projects, contact */
+  .window-chrome {
+    @apply rounded-xl border border-ink/10 dark:border-white/10 bg-white/70 dark:bg-ink-light/70 backdrop-blur-xl shadow-lg dark:shadow-glass overflow-hidden;
+  }
+
+  .window-titlebar {
+    @apply flex items-center gap-2 px-4 py-2.5 border-b border-ink/10 dark:border-white/10 bg-ink/[0.03] dark:bg-white/5;
+  }
+
+  .window-dot {
+    @apply w-2.5 h-2.5 rounded-full;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-white/[0.04] border border-white/40 dark:border-white/10 backdrop-blur-xl rounded-xl shadow-lg dark:shadow-glass;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs sm:text-sm text-accent-violet tracking-wide;
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl font-semibold text-ink dark:text-paper mt-2 mb-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-violet text-ink font-semibold text-sm hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-ink/15 dark:border-white/20 text-ink dark:text-paper font-semibold text-sm hover:border-accent-violet hover:text-accent-violet hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .tech-badge {
+    @apply font-mono text-[11px] sm:text-xs px-2.5 py-1 rounded-md bg-accent-violet/10 text-accent-violet border border-accent-violet/20;
+  }
+}
