@@ -2,7 +2,7 @@
 // Edit this file to update text, links, skills, and projects across the site.
 
 export const profile = {
-  name: 'Jiya Jain',
+  name: 'JIYA JAIN',
   roles: [
     'Computer Science Engineering Student',
     'Software Developer',
@@ -16,7 +16,10 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/jiya-jain-9453bb311',
   resumeUrl: '/resume.pdf',
   location: 'Mandsaur, Madhya Pradesh, India',
+  // For hero profile photo displayed in Hero.jsx
+  photoUrl: '/images/photojiya.jpeg',
 }
+
 
 export const about = {
   paragraph:

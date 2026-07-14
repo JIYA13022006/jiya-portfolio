@@ -91,9 +91,12 @@ export default function Hero() {
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-accent-violet/30 via-accent-gold/20 to-accent-mint/30 blur-2xl" />
             <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-[2rem] glass-card flex items-center justify-center overflow-hidden">
               <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent-violet/20 to-accent-mint/10">
-                <span className="font-display text-6xl sm:text-7xl font-semibold text-accent-violet">
-                  JJ
-                </span>
+                <img
+                  src={profile.photoUrl}
+                  alt={profile.name}
+                  className="w-full h-full object-cover"
+                />
+
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 window-chrome px-4 py-2">
