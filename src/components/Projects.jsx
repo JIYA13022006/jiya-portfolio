@@ -40,12 +40,14 @@ export default function Projects() {
               >
                 <div className="p-6 sm:p-7">
                   <div
-                    className={`w-full h-32 rounded-lg mb-5 flex items-center justify-center ${accentMap[p.accent]}`}
+                    className={`w-full h-32 rounded-lg mb-5 flex flex-col items-center justify-center ${accentMap[p.accent]}`}
                   >
-                    <span className="font-mono text-xs opacity-70">
-                      [ project preview ]
+                    <span className="font-mono text-xs opacity-70">[ project preview ]</span>
+                    <span className="mt-1 font-display text-base font-semibold text-ink dark:text-paper leading-tight">
+                      {p.name}
                     </span>
                   </div>
+
 
                   <h3 className="font-display text-xl font-semibold text-ink dark:text-paper mb-2">
                     {p.name}
